@@ -1,0 +1,23 @@
+p{
+    font-weight: 800;
+}
+
+.catched{
+    width: fit-content;
+    position: relative;
+    left: 5%;
+    top: 200px;
+    animation: catch-animation 3s;
+
+}
+
+@keyframes catch-animation {
+    from{
+        opacity: 0;
+        left: 0%;
+    }
+    to{
+        opacity: 1;
+        left: 5%;
+    }
+}

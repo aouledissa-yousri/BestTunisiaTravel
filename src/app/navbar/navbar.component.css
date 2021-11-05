@@ -1,0 +1,53 @@
+@import url('http://fonts.cdnfonts.com/css/apple-chancery');
+
+.bar{
+    background: linear-gradient(to top right, rgb(59, 58, 58), rgb(88, 88, 88));
+}
+
+
+.logo{
+    height: 100px; 
+    width: 100px;
+}
+
+.logo-title{
+    font-family: 'Apple Chancery', sans-serif;
+    font-size : 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.element{
+    font-weight: 500;
+    font-size: 21px;
+    margin-right: 40px;
+    position: relative;
+    top: -50px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(204, 203, 203);
+}
+
+.active{
+    color: white;
+    font-weight: bold;
+}
+
+.contain{
+    animation: fading 2s;
+}
+
+
+
+@keyframes fading{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
