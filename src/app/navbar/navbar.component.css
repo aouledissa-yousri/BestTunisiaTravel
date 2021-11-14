@@ -28,6 +28,11 @@
 .link {
     text-decoration: none;
     color: rgb(204, 203, 203);
+    transition: color 0.5s;
+}
+
+.link:hover{
+    color: white;
 }
 
 .active{
@@ -36,6 +41,11 @@
 }
 
 .contain{
+    animation: fading 2s;
+    transition: background 1s;
+}
+
+.playAnimation{
     animation: fading 2s;
 }
 
@@ -49,5 +59,11 @@
         opacity: 1;
     }
 }
+
+.activated{
+    background: rgba(22, 22, 22, 0.473);
+}
+
+
 
 

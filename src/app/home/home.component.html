@@ -1,4 +1,91 @@
 <div class = "catched">
-    <h1>Welcome To Best Tunisia Travel</h1>
+    <h1 class = "header">Welcome To Best Tunisia Travel</h1>
     <p>The place where you will experience travelling like you never did before</p>
+    <button class = "see-more" (click) = "scroll(1050)">See more</button>
+</div>
+
+<div class = "content">
+    <h1 style = "font-size: 70px">Live an unforgettable experience</h1>
+    <p style = "font-weight: 100">With its unique cuisine, rich culture, some of the most beautiful beaches in the world, breathtaking waterfalls, and adventure <br>
+        for everyone’s liking, all you have to do is choose the perfect type of tourism for you and be amazed by the wonders of Tunisia.
+    </p>
+</div>
+
+<div class = "sections overflow-hidden">
+    <div class = "row">
+
+        <div *ngFor = "let section of sections; index as i" class = "section"
+                [ngStyle] = "{'background-image': 'url(../../' + section.image + ')',
+                                'background-size': '500px 350px'
+                            }"
+        >
+            <h2 style = "color: rgb(255, 255, 255)">{{section.title}}</h2>
+            <button class = "see-more" style = "color: white; 
+                position: relative; top: 240px; left: 10px"
+            >Read more</button>
+        </div>
+
+    </div>
+</div>
+
+
+<div class = "essential">
+    <h1 style = "font-size: 70px">Essential Information</h1>
+    <div class = "container">
+        <div class = "row">
+            <span class = "col row info" style = "cursor: pointer">
+                <span class = "col"><i class='fas fa-h-square' style='font-size:48px;color:red'></i></span>
+                <span class = "col">Health</span>
+            </span>
+            <span class = "col row info" style = "cursor: pointer">
+                <span class = "col"><i class='fas fa-exclamation-triangle' style='font-size:48px;color:red'></i></span>
+                <span class = "col">Safety</span>
+            </span>
+            <span class = "col row info" style = "cursor: pointer">
+                <span class = "col"><i class='fas fa-dollar-sign' style='font-size:48px;color:red'></i></span>
+                <span class = "col">Currency</span>
+            </span>
+        </div>
+        <br><br>
+        <div class = "row ">
+            <span class = "col row info" style = "cursor: pointer">
+                <span class = "col"><i class="fa fa-file" style="font-size:48px;color:red"></i></span>
+                <span class = "col">Travel Papers</span>
+            </span>
+            <span class = "col row info" style = "cursor: pointer">
+                <span class = "col"><i class="fa fa-phone" style="font-size:48px;color:red"></i></span>
+                <span class = "col">Emergency Numbers</span>
+            </span>
+            <span class = "col row info" style = "cursor: pointer">
+                <span class = "col"><i class="fa fa-language" style="font-size:48px;color:red"></i></span>
+                <span class = "col">Language</span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class = "footer bg-dark text-light">
+    <div class = "d-flex justify-content-around">
+        <img src = "assets/logo.png" height = "200" width = "200" >
+
+        <div>
+            <span style = "font-size: 20px;">Site</span><br>
+            <a class = "footer-link">Experience</a><br>
+            <a class = "footer-link">Destinations</a><br>
+            <a class = "footer-link">Essential information</a><br>
+            <a class = "footer-link">About us</a><br>
+        </div>
+
+        <div>
+            <span style = "font-size: 20px;">Follow us</span><br>
+            <a href = "https://facebook.com" target = "_blank"><img src = "assets/socialMedia/facebook.png" class = "image icon"></a>
+            <a href = "https://youtube.com" target = "_blank"><img src = "assets/socialMedia/youtube.png" class = "image-2 icon"></a>
+            <a href = "https://twitter.com" target = "_blank"><img src = "assets/socialMedia/twitter.png" class = "image icon"></a>
+            <a href = "https://instagram.com" target = "_blank"><img src = "assets/socialMedia/instagram.png" class = "image icon" style = "margin-left: 5px"></a>
+
+        </div>
+
+    </div>
+
+    
 </div>

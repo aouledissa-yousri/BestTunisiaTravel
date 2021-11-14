@@ -4,11 +4,34 @@ p{
 
 .catched{
     width: fit-content;
+    color: rgb(221, 221, 221);
     position: relative;
     left: 5%;
     top: 200px;
     animation: catch-animation 3s;
 
+}
+
+.header{
+    font-size: 70px;
+
+}
+
+.see-more{
+    background: transparent;
+    color: rgb(221, 221, 221);
+    border: 3px solid rgb(221, 221, 221);
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: border 0.5s, background 0.5s;
+}
+
+.see-more:hover{
+    background: rgb(115, 226, 115);
+    border: 3px solid rgb(115, 226, 115);
 }
 
 @keyframes catch-animation {
@@ -21,3 +44,92 @@ p{
         left: 5%;
     }
 }
+
+@keyframes fading{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.content{
+    position: relative;
+    top: 750px;
+    text-align: center;
+    opacity: 0;
+}
+
+.playContentAnimation{
+    animation: fading 1s;
+    opacity: 1;
+}
+
+.sections{
+    position: relative;
+    top: 750px;
+}
+
+.section{
+    width: 500px;
+    height: 350px;
+    margin-left: 8%;
+    margin-top: 10px;
+    filter: brightness(50%);
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.section:hover, .icon:hover{
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
+
+.essential{
+    position: relative;
+    top: 900px;
+    text-align: center;
+}
+
+.info{
+    transition: border 0.5s, color 0.5s;
+}
+
+.info:hover{
+    border-bottom: 1px solid red;
+    color: red;
+}
+
+.footer{
+    position: relative;
+    top: 1100px;
+}
+
+
+.footer-link:hover{
+    color: white;
+}
+
+.footer-link{
+    font-weight: 100;
+    cursor: pointer;
+    color: grey;
+    transition: color 1s;
+    text-decoration: none;
+}
+
+.image,.image-2{
+    height: 40px;
+    width: 40px;
+}
+
+.image-2{
+    width: 55px;
+}
+
+.icon{
+    filter: brightness(80%);
+    transition: filter 0.5s, transform 0.5s;
+}
+
