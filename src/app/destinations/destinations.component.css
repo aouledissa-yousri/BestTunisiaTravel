@@ -3,6 +3,8 @@
     top: 20vh;
     background: white;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
 }
 
 .loading{
@@ -20,4 +22,12 @@
     100%{
         transform: rotate(360deg)
     }
+}
+
+.item{
+    transition: transform 0.5s
+}
+
+.item:hover{
+    transform: scale(1.05)
 }

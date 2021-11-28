@@ -1,9 +1,9 @@
-<div  class = "container d-flex justify-content-around offers">
+<div  class = "container d-flex flex-wrap justify-content-around offers">
    
     <ng-container *ngIf = "destinations.length > 0; else loading">
         <ng-container *ngFor = "let destination of destinations">
         
-            <div class = "card" style = "width: 18rem;">
+            <div class = "card item" style = "width: 18rem; margin-bottom: 10px">
                 <img [src] = "destination.image" class = "card-img-top">
                 <div class = "card-body">
                     <h5 class = "card-title">{{destination.name}}</h5>

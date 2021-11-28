@@ -21,14 +21,21 @@ import { LanguageComponent } from './essential/language/language.component';
 import { DestinationComponent } from './destination/destination.component';
 
 const config = {
-  apiKey: "AIzaSyAyqrFjLwLBi3q9Z_2WJjQGx_sruc9v1mA",
+  /*apiKey: "AIzaSyAyqrFjLwLBi3q9Z_2WJjQGx_sruc9v1mA",
   authDomain: "besttunisiatravel.firebaseapp.com",
   databaseURL: "https://besttunisiatravel-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "besttunisiatravel",
   storageBucket: "besttunisiatravel.appspot.com",
   messagingSenderId: "1067436259004",
   appId: "1:1067436259004:web:1b350e98004fe1a8b342b9",
-  measurementId: "G-8JPF54LWL4"
+  measurementId: "G-8JPF54LWL4"*/
+
+  apiKey: "AIzaSyB8yTTMyXCQ0HbOqbi8Hioj-Im-9Nc3e10",
+  authDomain: "besttunisiatravel-53d93.firebaseapp.com",
+  projectId: "besttunisiatravel-53d93",
+  storageBucket: "besttunisiatravel-53d93.appspot.com",
+  messagingSenderId: "427379768924",
+  appId: "1:427379768924:web:780b7af62ca2ff8a807099"
 }
 
 @NgModule({
