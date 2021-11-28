@@ -35,30 +35,31 @@
         <div class = "row">
             <span class = "col row info" style = "cursor: pointer">
                 <span class = "col"><i class='fas fa-h-square' style='font-size:48px;color:red'></i></span>
-                <span class = "col">Health</span>
+                <span class = "col" routerLink = "Essential/health" (click) = "redirect('Essential/health')">Health</span>
             </span>
             <span class = "col row info" style = "cursor: pointer">
                 <span class = "col"><i class='fas fa-exclamation-triangle' style='font-size:48px;color:red'></i></span>
-                <span class = "col">Safety</span>
+                <span class = "col" (click) = "redirect('Essential/safety')">Safety</span>
             </span>
             <span class = "col row info" style = "cursor: pointer">
                 <span class = "col"><i class='fas fa-dollar-sign' style='font-size:48px;color:red'></i></span>
-                <span class = "col">Currency</span>
+                <span class = "col" (click) = "redirect('Essential/currency')">Currency</span>
             </span>
+            <router-outlet></router-outlet>
         </div>
         <br><br>
         <div class = "row ">
             <span class = "col row info" style = "cursor: pointer">
                 <span class = "col"><i class="fa fa-file" style="font-size:48px;color:red"></i></span>
-                <span class = "col">Travel Papers</span>
+                <span class = "col" (click) = "redirect('Essential/travel_papers')">Travel Papers</span>
             </span>
             <span class = "col row info" style = "cursor: pointer">
                 <span class = "col"><i class="fa fa-phone" style="font-size:48px;color:red"></i></span>
-                <span class = "col">Emergency Numbers</span>
+                <span class = "col" (click) = "redirect('Essential/emergency_numbers')">Emergency Numbers</span>
             </span>
             <span class = "col row info" style = "cursor: pointer">
                 <span class = "col"><i class="fa fa-language" style="font-size:48px;color:red"></i></span>
-                <span class = "col">Language</span>
+                <span class = "col" (click) = "redirect('Essential/language')">Language</span>
             </span>
         </div>
     </div>
@@ -70,10 +71,10 @@
 
         <div>
             <span style = "font-size: 20px;">Site</span><br>
-            <a class = "footer-link">Experience</a><br>
-            <a class = "footer-link">Destinations</a><br>
-            <a class = "footer-link">Essential information</a><br>
-            <a class = "footer-link">About us</a><br>
+            <a class = "footer-link" (click) = "redirect('Home'); scroll(0)" routerLink = "Home">Experience</a><br>
+            <a class = "footer-link" (click) = "redirect('Destinations'); scroll(0)" routerLink = "Destinations">Destinations</a><br>
+            <a class = "footer-link" (click) = "redirect('Essential'); scroll(0)" routerLink = "Essential">Essential information</a><br>
+            <a class = "footer-link" (click) = "redirect('About'); scroll(0)" routerLink = "About">About us</a><br>
         </div>
 
         <div>

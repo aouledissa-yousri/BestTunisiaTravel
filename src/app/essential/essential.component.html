@@ -1,0 +1,45 @@
+<div class = "essential-catch">
+    <h1 style = "font-size: 70px">Essential Travel information</h1>
+    <button class = "see-more" (click) = "scroll(900)">See more</button>
+</div>
+
+<div class = "navbar" style = "width: fit-content">
+    <ul class = "list-group">
+        <li *ngFor = "let essential of essentials" class = "list-group-item link-size row" [routerLink] = "essential.route">
+            <span class = "col icon-width default-icon" [routerLink] = "essential.route" routerLinkActive = "active-two"><i [class] = "essential.icon" style='font-size:48px;'></i></span><br>
+            <a class = "link" [routerLink] = "essential.route" routerLinkActive = "active">{{essential.name}}</a>  
+        </li>
+    </ul>
+</div>
+
+<div class = "x">
+    <router-outlet></router-outlet>
+</div>
+
+<div class = "footer bg-dark text-light">
+    <div class = "d-flex justify-content-around">
+        <img src = "assets/logo.png" height = "200" width = "200" >
+
+        <div>
+            <span style = "font-size: 20px;">Site</span><br>
+            <a class = "footer-link" (click) = "redirect('Home'); scroll(0)" routerLink = "Home">Experience</a><br>
+            <a class = "footer-link" (click) = "redirect('Destinations'); scroll(0)" routerLink = "Destinations">Destinations</a><br>
+            <a class = "footer-link" (click) = "redirect('Essential'); scroll(0)" routerLink = "Essential">Essential information</a><br>
+            <a class = "footer-link" (click) = "redirect('About'); scroll(0)" routerLink = "About">About us</a><br>
+        </div>
+
+        <div>
+            <span style = "font-size: 20px;">Follow us</span><br>
+            <a href = "https://facebook.com" target = "_blank"><img src = "assets/socialMedia/facebook.png" class = "image icon"></a>
+            <a href = "https://youtube.com" target = "_blank"><img src = "assets/socialMedia/youtube.png" class = "image-2 icon"></a>
+            <a href = "https://twitter.com" target = "_blank"><img src = "assets/socialMedia/twitter.png" class = "image icon"></a>
+            <a href = "https://instagram.com" target = "_blank"><img src = "assets/socialMedia/instagram.png" class = "image icon" style = "margin-left: 5px"></a>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+

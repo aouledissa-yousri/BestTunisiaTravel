@@ -1,6 +1,9 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { SectionService } from "../services/section/section.service";
 import { Section } from "../models/section";
+import { Router } from '@angular/router';
+import { Title } from "@angular/platform-browser";
+
 
 @Component({
   selector: 'app-home',
@@ -12,7 +15,7 @@ export class HomeComponent implements OnInit {
   sections : Section[] = []
 
 
-  constructor(private section: SectionService) { }
+  constructor(private section: SectionService, private router: Router, private title: Title) { }
 
   private isInViewport(element: any) {
     const rect = element.getBoundingClientRect();
@@ -30,6 +33,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.sections = this.section.getSections()
+    window.scrollTo(0,0);
+    this.title.setTitle("Best Tunisia Travel")
   }
 
   @HostListener("window:scroll")
@@ -45,6 +50,10 @@ export class HomeComponent implements OnInit {
     if(this.isInViewport(document.getElementsByClassName("essential")[0])){
       document.getElementsByClassName("essential")[0].classList.add("playContentAnimation")
     }
+  }
+
+  redirect(path: string){
+    this.router.navigate([path])
   }
 
 }

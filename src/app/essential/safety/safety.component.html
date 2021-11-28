@@ -1,0 +1,39 @@
+<div class = "contain">
+    <h1>Safety</h1>
+    <p>
+        Terrorist groups continue plotting possible attacks in Tunisia. Terrorists may attack with little or no warning, 
+        targeting tourist locations, transportation hubs, museums, resorts, hotels, festivals, nightclubs, restaurants,
+        religious sites, markets/shopping malls, government facilities and security forces.
+    </p>
+    <p>Do not travel to:</p>
+    <ul>
+        <p>
+            <li>Within 30 km of southeastern Tunisia along the border with Libya due to terrorism.</li>
+            <li>Mountainous areas in the country’s west, including the Chaambi Mountain National Park area, due to terrorism.</li>
+            <li>The desert south of Remada due to the military zone.</li>
+            <li>Jendouba south of Ain Drahem and west of RN15, El Kef, and Kasserine, next to the Algerian border due to terrorism.</li>
+            <li>Sidi Bou Zid in central Tunisia due to terrorism.</li>
+        </p>
+    </ul>
+
+    <h4>Warnings & Dangers in Tunisia</h4>
+    <ul>
+        
+
+        <li *ngFor = "let warning of warnings">
+            <i [class] = "warning.icon" style = "color: red; font-size: 25px;"></i> &nbsp;
+            <span>{{warning.risk}}: </span>
+            <span [ngClass] = "{
+                'text-success': warning.level == 'Low',
+                'text-warning': warning.level == 'Medium',
+                'text-danger': warning.level == 'High'
+            }">
+                {{warning.level}}
+            </span>
+            <p>{{warning.description}}</p>
+        </li>
+    </ul>
+
+    <h4>Safety map</h4>
+    <img src = "assets/safety.jpg">
+</div>

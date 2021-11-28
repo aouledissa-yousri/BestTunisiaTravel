@@ -1,0 +1,23 @@
+.offers{
+    position: relative;
+    top: 20vh;
+    background: white;
+    padding: 20px;
+}
+
+.loading{
+    padding: 60px;
+    border-radius: 50%;
+    border: 10px solid rgb(194, 194, 194);
+    border-left: 10px solid rgb(27, 238, 132);
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}

@@ -1,0 +1,60 @@
+@import url("../home/home.component.css");
+
+.header{
+    color: rgb(221, 221, 221);
+    position: relative;
+    top: 180px;
+    animation: fade 2s;
+}
+
+.title{
+    font-family: 'Apple Chancery', sans-serif;
+    font-size: 80px;
+}
+
+.slogan{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 15px
+}
+
+.welcome{
+    position: relative;
+    top: 60vh;
+}
+
+.locator{
+    position: relative;
+    display: inline;
+    left: 50px;
+    bottom: 80px;
+    animation: locatorMove 2s infinite;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0
+    }
+    to{
+        opacity: 1
+    }
+}
+
+@keyframes locatorMove{
+    0% {
+        bottom: 80px;
+    }
+    50%{
+        bottom: 0px;
+    }
+
+    100%{
+        bottom: 80px;
+    }
+}
+
+.img{
+    height: 286px;
+    width: 286px;
+}
+

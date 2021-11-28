@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "BestTunisiaTravel:build:production",
+            "firebaseProject": "besttunisiatravel",
+            "firebaseHostingSite": "besttunisiatravel"
+          }
         }
       }
     }

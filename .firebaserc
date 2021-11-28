@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "besttunisiatravel": {
+      "hosting": {
+        "BestTunisiaTravel": [
+          "besttunisiatravel"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "besttunisiatravel"
+  }
+}

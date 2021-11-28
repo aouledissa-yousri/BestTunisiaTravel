@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, Host } from '@angular/core';
+import { Router } from "@angular/router"
 
 @Component({
   selector: 'app-navbar',
@@ -9,10 +10,14 @@ export class NavbarComponent implements OnInit {
 
   position = 0
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.position = window.scrollX
+  }
+
+  navigate(path: string){
+    this.router.navigate([path])
   }
 
   @HostListener("window:scroll")

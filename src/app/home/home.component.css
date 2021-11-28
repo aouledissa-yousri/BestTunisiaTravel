@@ -81,7 +81,7 @@ p{
     transition: filter 0.5s, transform 0.5s;
 }
 
-.section:hover, .icon:hover{
+.section:hover{
     filter: brightness(100%);
     transform: scale(1.05);
 }
@@ -104,6 +104,7 @@ p{
 .footer{
     position: relative;
     top: 1100px;
+    padding: 40px;
 }
 
 
@@ -133,3 +134,7 @@ p{
     transition: filter 0.5s, transform 0.5s;
 }
 
+.icon:hover{
+    filter: brightness(100%);
+    transform: scale(1.1);
+}

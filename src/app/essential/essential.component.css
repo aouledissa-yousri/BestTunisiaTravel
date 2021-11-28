@@ -1,0 +1,70 @@
+@import url("../home/home.component.css");
+
+.essential-catch{
+    color: rgb(221, 221, 221);
+    position: relative;
+    width: fit-content;
+    top: 200px;
+    left: 5%;
+    animation: catch-animation 3s;
+}
+
+.navbar{
+    position: relative;
+    top: 800px;
+}
+
+.link-size{
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.icon-width{
+    max-width: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color: grey;
+    transition: color 0.5s;
+}
+
+.link:hover{
+    color: black;
+}
+
+.active{
+    color: black;
+}
+
+.default-icon{
+    color:grey;
+}
+
+.active-two{
+    color: red;
+}
+
+.x{
+    margin-left: 250px;
+    margin-top: 100px;
+    width: fit-content;
+    min-height: 900px;
+    max-height: 2000px;
+}
+
+.footer{
+    position: relative;
+    top: 100px;
+    padding: 40px;
+}
+
+
+
+
+
+
+
+
+

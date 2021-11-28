@@ -1,1 +1,24 @@
-<p>destinations works!</p>
+<div  class = "container d-flex justify-content-around offers">
+   
+    <ng-container *ngIf = "destinations.length > 0; else loading">
+        <ng-container *ngFor = "let destination of destinations">
+        
+            <div class = "card" style = "width: 18rem;">
+                <img [src] = "destination.image" class = "card-img-top">
+                <div class = "card-body">
+                    <h5 class = "card-title">{{destination.name}}</h5>
+                    <p class = "card-text" style = "font-family: arial 20px; font-weight: 1">
+                        {{destination.description}}
+                    </p>
+                    <button class = "btn btn-primary" style = "position: relative; margin-left: 160px">See more</button>
+                </div>
+            </div>
+        
+        </ng-container>
+    </ng-container>
+
+    <ng-template #loading>
+        <div class = "loading"></div>
+    </ng-template>
+
+</div>

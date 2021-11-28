@@ -1,0 +1,17 @@
+p{
+    font-family: arial;
+    font-weight: 1;
+}
+
+.contain{
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
