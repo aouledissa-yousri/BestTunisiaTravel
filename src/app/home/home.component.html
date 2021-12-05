@@ -4,7 +4,7 @@
     <button class = "see-more" (click) = "scroll(1050)">See more</button>
 </div>
 
-<div class = "content">
+<div class = "content" >
     <h1 style = "font-size: 70px">Live an unforgettable experience</h1>
     <p style = "font-weight: 100">With its unique cuisine, rich culture, some of the most beautiful beaches in the world, breathtaking waterfalls, and adventure <br>
         for everyone’s liking, all you have to do is choose the perfect type of tourism for you and be amazed by the wonders of Tunisia.
@@ -22,7 +22,8 @@
             <h2 style = "color: rgb(255, 255, 255)">{{section.title}}</h2>
             <button class = "see-more" style = "color: white; 
                 position: relative; top: 240px; left: 10px"
-            >Read more</button>
+                (click) = "goToCategory(section.title)"
+            >See more</button>
         </div>
 
     </div>

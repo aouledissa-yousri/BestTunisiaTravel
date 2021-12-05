@@ -1,6 +1,15 @@
 <div  class = "container offers">
      
-    <input type = "text" placeholder = "Search offer name" class = "form-control search" #word (keyup) = "search(word.value)">
+    <input type = "text" placeholder = "Search offer name" class = "form-control search" #word (keyup) = "search(word.value)"><br><br>
+    <h4 style = "text-align: center">Search by category</h4>
+    <div style = "margin-left: 25%">
+        <input type = "checkbox"  value = "Nature and outdoor activities" [checked] =  "checkCategory('Nature and outdoor activities')" (click) = "modCategory($event); filter()"> 
+        Nature and outdoor activities &nbsp; &nbsp;
+
+        <input type = "checkbox" value = "Culture" [checked] = "checkCategory('Culture')" (click) = "modCategory($event); filter()"> Culture &nbsp; &nbsp;
+        <input type = "checkbox" value = "Gastronomy" [checked] = "checkCategory('Gastronomy')" (click) = "modCategory($event); filter()"> Gastronomy &nbsp; &nbsp;
+        <input type = "checkbox" value = "Beaches" [checked] = "checkCategory('Beaches')" (click) = "modCategory($event); filter()"> Beaches 
+    </div>
    
     <div class = "d-flex flex-wrap justify-content-around">
         <ng-container *ngIf = "destinations.length > 0; else searchOffer">

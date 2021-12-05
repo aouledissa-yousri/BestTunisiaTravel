@@ -8,6 +8,7 @@ import * as firestore from "@firebase/firestore";
 })
 export class DestinationsService {
 
+  categories: string[] = []
 
   constructor(private firestore: AngularFirestore) { }
 

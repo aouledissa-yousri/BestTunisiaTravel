@@ -57,7 +57,7 @@ p{
 
 .content{
     position: relative;
-    top: 750px;
+    top: 80vh;
     text-align: center;
     opacity: 0;
 }
@@ -69,7 +69,7 @@ p{
 
 .sections{
     position: relative;
-    top: 750px;
+    top: 85vh;
 }
 
 .section{

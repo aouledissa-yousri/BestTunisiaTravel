@@ -3,6 +3,7 @@ import { SectionService } from "../services/section/section.service";
 import { Section } from "../models/section";
 import { Router } from '@angular/router';
 import { Title } from "@angular/platform-browser";
+import { DestinationsService } from '../services/destinations/destinations.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   sections : Section[] = []
 
 
-  constructor(private section: SectionService, private router: Router, private title: Title) { }
+  constructor(private section: SectionService, private router: Router, private title: Title, private service: DestinationsService) { }
 
   private isInViewport(element: any) {
     const rect = element.getBoundingClientRect();
@@ -54,6 +55,11 @@ export class HomeComponent implements OnInit {
 
   redirect(path: string){
     this.router.navigate([path])
+  }
+
+  goToCategory(category: string){
+    this.service.categories.push(category)
+    this.router.navigate(["Destinations"])
   }
 
 }
