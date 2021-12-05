@@ -180,7 +180,7 @@ export class CountriesService {
           return {code: "DO" , nationality: "Dominican R"}
               
       case  52 : 
-          return {code: "DZ" , nationality: "Algeria"}
+          return {code: "DZ" , nationality: "Algerian"}
               
       case  53 : 
           return {code: "EC" , nationality: "Ecuador"}
