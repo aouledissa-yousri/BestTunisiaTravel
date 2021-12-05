@@ -58,8 +58,8 @@ export class ApplyComponent implements OnInit {
 
   private initForm(){
     this.form = this.build.group({
-      firstName: ["", [Validators.pattern("[A-Z][a-z]+"), Validators.required]],
-      lastName: ["", [Validators.pattern("[A-Z][a-z]+"), Validators.required]],
+      firstName: ["", [Validators.pattern("[A-Z][^A-Z0-9]+"), Validators.required]],
+      lastName: ["", [Validators.pattern("[A-Z][^A-Z0-9]+"), Validators.required]],
       Age: [0, [Validators.required, Validators.min(18)]],
       birth: ["", Validators.required],
       passportNum: [0, [Validators.minLength(8), Validators.required]],
