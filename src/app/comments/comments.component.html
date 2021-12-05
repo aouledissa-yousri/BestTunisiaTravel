@@ -1,0 +1,43 @@
+<div class = "offers container">
+    
+    <ng-container *ngIf = "destination.id != 0; else loading">
+        <div class = "load">
+            <div class = "d-flex ">
+                <img [src] = "destination.image" height = "400" width = "500">
+                <span></span>
+                <div style = "margin-left: 60px">
+                    <h1>{{destination.name}}</h1>
+                    <ul class = "list-group" *ngFor = "let comment of destination.comments">
+                        <li class = "list-group-item" style = "width: 500px">
+                            {{comment.user}}: 
+                            <span style = "font-family: arial; font-weight: 1">{{comment.comment}}</span>
+                        </li>
+                    </ul><br><br>
+
+                    <form class = "d-flex" [formGroup] = "form" (ngSubmit) = "submit()">
+                        <input type = "text" placeholder = "Name" formControlName = "user"> &nbsp;
+                        <textarea type = "text" placeholder = "comment" rows = "1" formControlName = "comment"></textarea> &nbsp;
+                        <button class = "btn btn-primary" [disabled] = "form.invalid">Add comment</button>
+                    </form>
+                </div>
+            </div><br>
+
+            
+            <div class = "d-flex justify-content-between">
+                <button (click) = "back()" class = "btn btn-danger">Back</button>
+                <div>
+                    <button class = "btn btn-success" (click) = "apply()">Apply</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #loading>
+        <div class = "d-flex justify-content-around">
+            <div class = "loading"></div>
+        </div>
+    </ng-template>
+
+    
+
+</div>

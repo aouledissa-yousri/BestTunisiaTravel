@@ -1,0 +1,21 @@
+@import url("../comments/comments.component.css");
+
+.input{
+    border: none;
+    border-bottom: 3px solid rgb(236, 230, 230);
+    outline: none;
+    transition: border-bottom 0.5s;
+    padding: 5px;
+}
+
+.input:focus{
+    border-bottom: 3px solid rgb(129, 218, 129);
+}
+
+.unit{
+    display: inline-block
+}
+
+input.ng-invalid.ng-touched{
+    border-bottom: 3px solid rgb(240, 73, 73);
+}

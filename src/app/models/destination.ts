@@ -8,8 +8,9 @@ export class Destination{
         public prize: number,
         public promotion: boolean,
         public recent: boolean,
-        public category: string,
+        public category: string[],
         public comments: Comment[],
-        public description: string
+        public description: string,
+        public reservations: number
     ){}
 }

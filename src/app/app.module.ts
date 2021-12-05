@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -19,17 +21,13 @@ import { TravelPapersComponent } from './essential/travel-papers/travel-papers.c
 import { EmergencyNumbersComponent } from './essential/emergency-numbers/emergency-numbers.component';
 import { LanguageComponent } from './essential/language/language.component';
 import { DestinationComponent } from './destination/destination.component';
+import { CommentsComponent } from './comments/comments.component';
+import { ApplyComponent } from './apply/apply.component';
+import { ThanksComponent } from './thanks/thanks.component';
+import { ErrorComponent } from './error/error.component';
 
 const config = {
-  /*apiKey: "AIzaSyAyqrFjLwLBi3q9Z_2WJjQGx_sruc9v1mA",
-  authDomain: "besttunisiatravel.firebaseapp.com",
-  databaseURL: "https://besttunisiatravel-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "besttunisiatravel",
-  storageBucket: "besttunisiatravel.appspot.com",
-  messagingSenderId: "1067436259004",
-  appId: "1:1067436259004:web:1b350e98004fe1a8b342b9",
-  measurementId: "G-8JPF54LWL4"*/
-
+  
   apiKey: "AIzaSyB8yTTMyXCQ0HbOqbi8Hioj-Im-9Nc3e10",
   authDomain: "besttunisiatravel-53d93.firebaseapp.com",
   projectId: "besttunisiatravel-53d93",
@@ -52,14 +50,19 @@ const config = {
     TravelPapersComponent,
     EmergencyNumbersComponent,
     LanguageComponent,
-    DestinationComponent
+    DestinationComponent,
+    CommentsComponent,
+    ApplyComponent,
+    ThanksComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(config),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [
     Title,

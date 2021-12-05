@@ -1,24 +1,39 @@
-<div  class = "container d-flex flex-wrap justify-content-around offers">
+<div  class = "container offers">
+     
+    <input type = "text" placeholder = "Search offer name" class = "form-control search" #word (keyup) = "search(word.value)">
    
-    <ng-container *ngIf = "destinations.length > 0; else loading">
-        <ng-container *ngFor = "let destination of destinations">
-        
-            <div class = "card item" style = "width: 18rem; margin-bottom: 10px">
-                <img [src] = "destination.image" class = "card-img-top">
-                <div class = "card-body">
-                    <h5 class = "card-title">{{destination.name}}</h5>
-                    <p class = "card-text" style = "font-family: arial 20px; font-weight: 1">
-                        {{destination.description}}
-                    </p>
-                    <button class = "btn btn-primary" style = "position: relative; margin-left: 160px">See more</button>
+    <div class = "d-flex flex-wrap justify-content-around">
+        <ng-container *ngIf = "destinations.length > 0; else searchOffer">
+            <ng-container *ngFor = "let destination of destinations">
+            
+                <div class = "card item load" style = "width: 350px; margin-bottom: 10px; margin-top: 20px">
+                    <img [src] = "destination.image" class = "card-img-top" height = "300">
+                    <div class = "card-body">
+                        <h5 class = "card-title">
+                            <i class="fas fa-map-marker-alt"></i>
+                            {{destination.name}}
+                        </h5>
+                        <p class = "card-text" style = "font-family: arial 20px; font-weight: 1; color: red">
+                            {{destination.prize}} <sup>TND</sup>
+                        </p>
+                        <button class = "btn btn-primary" style = " margin-left: 210px" (click) = "seeMore(destination.id)">See more</button>
+                    </div>
                 </div>
-            </div>
-        
+            
+            </ng-container>
         </ng-container>
-    </ng-container>
 
-    <ng-template #loading>
-        <div class = "loading"></div>
-    </ng-template>
+        <ng-template  #searchOffer>
+            <ng-container *ngIf = "!found; else loading">
+                <h1 style = "margin-top: 10px">No offers found</h1> 
+            </ng-container>
+        </ng-template>
+    
+        <ng-template #loading >
+            <div class = "loading"></div>
+        </ng-template>
+
+        
+    </div>
 
 </div>

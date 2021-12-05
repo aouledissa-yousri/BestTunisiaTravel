@@ -10,10 +10,21 @@ import { CurrencyComponent } from "./essential/currency/currency.component";
 import { TravelPapersComponent } from "./essential/travel-papers/travel-papers.component";
 import { EmergencyNumbersComponent } from "./essential/emergency-numbers/emergency-numbers.component";
 import { LanguageComponent } from "./essential/language/language.component";
+import { DestinationComponent } from './destination/destination.component';
+import { CommentsComponent } from './comments/comments.component';
+import { ApplyComponent } from './apply/apply.component';
+import { ThanksComponent } from './thanks/thanks.component';
+import { ErrorComponent } from './error/error.component';
+
 
 const routes: Routes = [
   {path: 'Home', component: HomeComponent},
   {path: 'Destinations', component: DestinationsComponent},
+  {path: "Destinations/:id", component: DestinationComponent},
+  {path: "Destinations/:id/Comments", component: CommentsComponent},
+  {path: "Destinations/:id/Apply", component: ApplyComponent},
+  {path: "Thanks", component: ThanksComponent},
+
   {path: 'About', component: AboutComponent},
   {path: 'Essential', component: EssentialComponent,
     children: [
@@ -26,7 +37,8 @@ const routes: Routes = [
       {path: '', redirectTo: 'health', pathMatch: 'full'}
     ]
   },
-  {path: '', redirectTo: 'Home', pathMatch: 'full'}
+  {path: '', redirectTo: 'Home', pathMatch: 'full'},
+  {path: "**", component: ErrorComponent}
 ];
 
 @NgModule({

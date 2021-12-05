@@ -1,0 +1,29 @@
+.see-more{
+    background: transparent;
+    color: rgb(221, 221, 221);
+    border: 3px solid rgb(221, 221, 221);
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: border 0.5s, background 0.5s;
+}
+
+.see-more:hover{
+    background: rgb(115, 226, 115);
+    border: 3px solid rgb(115, 226, 115);
+}
+
+.thanks{
+    animation: fade 1s;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0
+    }
+    to{
+        opacity: 1
+    }
+}

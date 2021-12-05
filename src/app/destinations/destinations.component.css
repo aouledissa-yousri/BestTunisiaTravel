@@ -1,6 +1,6 @@
 .offers{
     position: relative;
-    top: 20vh;
+    top: 10vh;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -31,3 +31,22 @@
 .item:hover{
     transform: scale(1.05)
 }
+
+@keyframes load{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.load{
+    animation: load 1s;
+}
+
+.search{
+    width: 40vw;
+    margin-left: 23vw
+}
+

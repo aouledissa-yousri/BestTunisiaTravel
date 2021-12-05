@@ -1,0 +1,109 @@
+<div class = "offers container">
+    <h1 style = "text-align: center">
+        <img src = "assets/logo.png" height = "100" width = "100">
+        Reservation form
+    </h1>
+    <form [formGroup] = "form" (ngSubmit) = "apply()">
+        <fieldset class = "scheduler-border">
+            <legend class>General information</legend>
+            <div class = "unit">
+                <input type = "text" placeholder = "First Name" class = "input" formControlName = "firstName" #firstName><br>
+                <div [hidden] = "!isEmpty('firstName')" class = "alert alert-danger error" style = "width: 190px">
+                    First name is required
+                </div>
+                <div [hidden] = "!isValidPattern('firstName')" class = "alert alert-danger error" style = "width: 190px">
+                    First name must be begin with uppercase
+                </div>
+            </div>&nbsp; &nbsp;
+
+            <div class = "unit">
+                <input type = "text" placeholder = "Last Name" class = "input" formControlName = "lastName"><br>
+                <div [hidden] = "!isEmpty('lastName')" class = "alert alert-danger error" style = "width: 190px">
+                    Last name is required
+                </div>
+                <div [hidden] = "!isValidPattern('lastName')" class = "alert alert-danger error" style = "width: 190px">
+                    Last name must be begin with uppercase
+                </div>
+            </div>&nbsp; &nbsp;
+            
+            <div class = "unit">
+                <input type = "number" placeholder = "Age" class = "input" min = "18" formControlName = "Age" (keydown) = "typing($event)"><br>
+                <div [hidden] = "!isEmpty('Age')" class = "alert alert-danger error" style = "width: 190px">
+                    Age is required
+                </div>
+                <div [hidden] = "!minAge()" class = "alert alert-danger error" style = "width: 190px">
+                    You must be older than 18 years in order to apply
+                </div>
+            </div><br><br>
+
+
+
+            <div class = "unit"> 
+                <label>Date of birth: </label>&nbsp;
+                <div class = "unit">
+                    <input type = "date" class = "input" formControlName = "birth">
+                    <div [hidden] = "!isEmpty('birth')" class = "alert alert-danger error" style = "width: 190px">
+                        Birth date is required
+                    </div>
+                </div>
+            </div> &nbsp; &nbsp;         
+            
+            <div class = "unit">
+                <input type = "number" placeholder = "Passport number" class = "input" formControlName = "passportNum" (keydown) = "typing($event)"> 
+                <div [hidden] = "!isEmpty('passportNum')" class = "alert alert-danger error" style = "width: 190px">
+                    Passport number is required
+                </div>
+                <div [hidden] = "!passportValid()" class = "alert alert-danger error" style = "width: 190px">
+                    must contain at least 8 numbers
+                </div>
+            </div>&nbsp; &nbsp;
+
+            <div class = "unit">
+                <input type = "email" placeholder = "Email" class = "input" formControlName = "email">
+                <div [hidden] = "!isEmpty('email')" class = "alert alert-danger error" style = "width: 190px">
+                    Email is required
+                </div>
+            </div><br><br>
+
+            <label>Gender: </label>&nbsp;
+            <input type = "radio" formControlName = "gender" value = "male" name = "gender">
+            &nbsp; <span style = "font-family: arial; font-weight: 1">Male</span> &nbsp;
+
+            <input type = "radio" formControlName = "gender" value = "female" name = "gender">
+            &nbsp; <span style = "font-family: arial; font-weight: 1">Female</span>
+            <br><br>
+
+            <img [src] = "link">&nbsp;
+            <select formControlName = "nationality" class = "input" style = "width : 200px; cursor: pointer" (change) = "getFlag($event)">
+                <ng-container *ngFor = "let nationality of nationalities; index as i">
+                    <option [value] = "nationality.name">
+                        {{nationality.name}}
+                    </option>
+                </ng-container>
+            </select>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Marital status</legend>
+            <input type = "checkbox" (change) = "showPartnerInfo($event)"> Married<br>
+            &nbsp;<input type = "text" class = "input" placeholder = "Partner's full name" [hidden] = "!partnerInfo" formControlName = "partnerName"> 
+            &nbsp;<input type = "number" class = "input" placeholder = "Partner's passport number" style = "width: 250px"[hidden] = "!partnerInfo" formControlName = "partnerPassportNum" (keydown) = "typing($event)"> <br><br>
+
+            <button class = "btn btn-primary" type = "button" (click) = "addChild()">Enter child name</button><br><br>
+            <div formArrayName = "children">
+                <div *ngFor = "let child of children.controls; index as i">
+                    <input type = "text" placeholder = "Child's full name" class = "input" [formControlName] = "i"><br><br>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class = "d-flex justify-content-between">
+            <button class = "btn btn-danger" (click) = "back()">Back</button>
+            <div>
+                <button class = "btn btn-warning" type = "reset" (click) = "reset()">Reset</button> &nbsp;
+                <button class = "btn btn-success" type = "submit" [disabled] = "form.invalid">Apply</button>
+            </div>
+        </div>
+
+    </form>
+</div>

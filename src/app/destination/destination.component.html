@@ -1,1 +1,41 @@
-<p>destination works!</p>
+<div class = "offers container">
+    
+    <ng-container *ngIf = "destination.id != 0; else loading">
+        <div class = "load">
+            <div class = "d-flex ">
+                <img [src] = "destination.image" height = "400" width = "500">
+                <span></span>
+                <div style = "margin-left: 60px; width: 500px; overflow-wrap: break-word">
+                    <h1 style = "width: fit-content">{{destination.name}}</h1>
+                    <p>
+                        {{destination.description}}
+                    </p>
+                    <div>
+                        Prize: {{destination.prize}} <sup>TND</sup> &nbsp;
+                        <span class = "badge bg-primary" *ngIf = "destination.recent">New</span> &nbsp;
+                        <span class = "badge bg-danger" *ngIf = "destination.promotion">Promotion</span><br><br><br> 
+                    </div>
+                </div>
+            </div><br>
+
+            
+            <div class = "d-flex justify-content-between">
+                <button (click) = "back()" class = "btn btn-danger">Back</button>
+                <div>
+                    <button class = "btn btn-primary" (click) = "checkComments()" [routerLink] = "['Destinations', destination.id, 'Comments']">Check comments</button>&nbsp;
+                    <button class = "btn btn-success" (click) = "apply()"  [routerLink] = "['Destinations', destination.id, 'Apply']">Apply</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #loading>
+        <div class = "d-flex justify-content-around">
+            <div class = "loading"></div>
+        </div>
+    </ng-template>
+
+    
+
+</div>
+
